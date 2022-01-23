@@ -1,0 +1,21 @@
+#!/usr/bin/make -f
+include /usr/share/dpkg/architecture.mk
+
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+export LLVM_INSTALL_DIR := $(shell llvm-config --prefix)
+
+%:
+	dh $@ --with pkgkde_symbolshelper --buildsystem=cmake+ninja
+
+override_dh_auto_configure:
+	dh_auto_configure -- \
+		-DCMAKE_LIBRARY_PATH=$(DEB_HOST_MULTIARCH) \
+		-DCMAKE_SKIP_INSTALL_RPATH=ON
+
+override_dh_shlibdeps:
+	dh_shlibdeps --dpkg-shlibdeps-params=--ignore-missing-info
+
+execute_after_dh_auto_install:
+	# Reproducible builds: remove build paths from .prl files
+	sed -i -e '/^QMAKE_PRL_BUILD_DIR/d' debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/libQt6*.prl

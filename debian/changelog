@@ -1,0 +1,12 @@
+qt6-tools (6.2.2-2) experimental; urgency=medium
+
+  [ Patrick Franz ]
+  * Source-only upload to experimental.
+
+ -- Patrick Franz <deltaone@debian.org>  Thu, 30 Dec 2021 19:45:45 +0100
+
+qt6-tools (6.2.2-1) experimental; urgency=medium
+
+  * Initial release (Closes: #999890)
+
+ -- Patrick Franz <deltaone@debian.org>  Sat, 27 Nov 2021 01:34:55 +0100

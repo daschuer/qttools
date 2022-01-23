@@ -1,0 +1,2 @@
+usr/lib/${DEB_HOST_MULTIARCH}/qt6/plugins/designer/libqquickwidget.so
+usr/lib/qt6/bin/designer

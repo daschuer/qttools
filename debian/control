@@ -1,27 +1,25 @@
 Source: qt6-tools
 Section: libs
 Priority: optional
-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
-Uploaders: Patrick Franz <deltaone@debian.org>
-Build-Depends: clang (>= 1:13~),
-               cmake (>= 3.18~),
-               debhelper-compat (= 13),
-               libclang-dev (>= 1:13~),
+Maintainer: Daniel Schürmann <daschuer@mixxx.org>
+Build-Depends: clang,
+               cmake,
+               debhelper-compat (= 12),
+               libclang-dev,
                libgl-dev,
-               liblitehtml-dev,
-               libqt6opengl6-dev (>= 6.2.2+dfsg~),
+               libqt6opengl6-dev (>= 6.2.2),
                libssl-dev,
                libvulkan-dev [linux-any],
                libxcb-xkb-dev,
-               llvm-dev (>= 1:13~),
+               llvm-dev,
                ninja-build,
                pkg-config,
                pkg-kde-tools,
-               qt6-base-dev (>= 6.2.2+dfsg~),
-               qt6-base-private-dev (>= 6.2.2+dfsg~),
-               qt6-declarative-dev (>= 6.2.2+dfsg~),
-               qt6-declarative-private-dev (>= 6.2.2+dfsg~),
-Standards-Version: 4.6.0
+               qt6-base-dev (>= 6.2.2),
+               qt6-base-private-dev (>= 6.2.2),
+               qt6-declarative-dev (>= 6.2.2),
+               qt6-declarative-private-dev (>= 6.2.2),
+Standards-Version: 4.5.0
 Homepage: https://www.qt.io/developers/
 Vcs-Browser: https://salsa.debian.org/qt-kde-team/qt6/qt6-tools
 Vcs-Git: https://salsa.debian.org/qt-kde-team/qt6/qt6-tools.git
